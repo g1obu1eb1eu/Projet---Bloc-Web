@@ -1,0 +1,22 @@
+.logo{
+    display : flex;
+    justify-content : left;
+    width: 94.43px;
+    height: 88px;
+}
+
+.fond-header{
+    background-color: #FBDCB9;
+    display : flex;
+    height : 120px;
+}
+
+.navbar{
+    display : flex;
+    justify-content: space-between;
+}
+
+.navbarConnexion{
+    display : flex;
+    justify-content : flex-end;
+}
