@@ -1,0 +1,11 @@
+.navbar
+{
+    display: flex;
+    justify-content: space-around;
+    /* background-color: black; */
+    font-family: Century Gothic, serif ;
+    font-size: 1em;
+    color: whitesmoke; 
+    padding: 1em;
+    white-space: nowrap;
+}
