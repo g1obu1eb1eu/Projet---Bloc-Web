@@ -33,3 +33,24 @@
     text-decoration: none;
     font-weight: bold;
 }
+
+.img_top_left{
+    height: 5rem;
+    width: 5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #D9D9D9;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+}
+
+
+p{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    size: 1rem;
+}
