@@ -9,3 +9,27 @@
     padding: 1em;
     white-space: nowrap;
 }
+
+.white-links
+{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.white-links:hover
+{
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.white-links:active
+{
+    color: orange;
+}
+
+.actif
+{
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
