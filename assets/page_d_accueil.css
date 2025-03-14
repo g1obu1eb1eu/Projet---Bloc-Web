@@ -1,42 +1,8 @@
-/* .navbar
-{
-    display: flex;
-    justify-content: space-around;
-    font-family: Century Gothic, serif ;
-    font-size: 1em;
-    color: whitesmoke; 
-    padding: 1em;
-    white-space: nowrap;
-}
 
-.white-links
-{
-    color: aliceblue;
-    text-decoration: none;
+body {
+    margin: 0;
+    padding: 0;
 }
-
-.white-links:hover
-{
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-.white-links:active
-{
-    color: orange;
-}
-
-.actif
-{
-    color: orange;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.img_top_left{
-    height: 5rem;
-    width: 5rem;
-} */
 
 /* Footer */
 footer {
@@ -55,34 +21,59 @@ p{
 }
 
 header {
+    align-self: stretch;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f5d7a3; /* Beige */
-    padding: 15px 20px;
+    background-color:rgba(251, 220, 185, 1);
+    /* haut | droit | bas | gauche */
+    padding: 0.1rem 5rem 0.1rem 3rem;
 }
 
+
 /* Logo */
-.logo img {
-    height: 50px; /* Ajuste la taille du logo */
+.logo img { 
+    height: 5em; /* Ajuste la taille du logo */
+    padding-right: 5rem;
 }
 
 /* Menu de navigation */
 nav {
     flex-grow: 1;
-    text-align: center; /* Centrage du menu */
+    text-align: left;
 }
 
-nav a {
-    /*text-decoration: none;*/
+
+nav a{
+    text-decoration: none;
     color: black;
     font-weight: bold;
-    margin: 0 15px;
+    font-size: 1.4rem;
 }
 
-/* Connexion alignée à droite */
+nav a[name="catégorie"] {
+    margin: 0 2rem;
+}
+
+nav a[name="catégorie"]:hover, .connexion a:hover{
+    text-decoration: underline;
+}
+
+.connexion {
+    display: flex;  
+    align-items: center;  
+    gap: 0.5rem; 
+}
+
 .connexion a {
     text-decoration: none;
     color: black;
     font-weight: bold;
+    margin-left: 0 5rem;
+    font-size: 1.4em;
+}   
+
+.logo_connexion img {
+    height: 2rem; /* Ajustez la taille selon votre besoin */
+    width: auto;
 }
