@@ -1,8 +1,7 @@
-.navbar
+/* .navbar
 {
     display: flex;
     justify-content: space-around;
-    /* background-color: black; */
     font-family: Century Gothic, serif ;
     font-size: 1em;
     color: whitesmoke; 
@@ -37,7 +36,7 @@
 .img_top_left{
     height: 5rem;
     width: 5rem;
-}
+} */
 
 /* Footer */
 footer {
@@ -53,4 +52,37 @@ p{
     padding: 0;
     font-family: Arial, sans-serif;
     size: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5d7a3; /* Beige */
+    padding: 15px 20px;
+}
+
+/* Logo */
+.logo img {
+    height: 50px; /* Ajuste la taille du logo */
+}
+
+/* Menu de navigation */
+nav {
+    flex-grow: 1;
+    text-align: center; /* Centrage du menu */
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+/* Connexion alignée à droite */
+.connexion a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
