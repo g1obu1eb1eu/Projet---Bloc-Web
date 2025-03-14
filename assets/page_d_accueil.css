@@ -91,3 +91,18 @@ nav a[name="catégorie"]:hover, .connexion a:hover{
     border-color: black;
     border-width: 0.1rem 0.05rem 0.1rem 0.05rem;
 }
+
+a[name="btn_connexion"]{
+    border: solid;
+    border-color: black;    
+    border: 0.15rem solid;
+    padding: 1rem 15rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    
+}
+
+.part_deux{
+    margin:2rem;
+}
