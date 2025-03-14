@@ -33,7 +33,7 @@ header {
 
 /* Logo */
 .logo img { 
-    height: 5em; /* Ajuste la taille du logo */
+    height: 5em; 
     padding-right: 5rem;
 }
 
