@@ -252,7 +252,7 @@
     width: 100%;
     padding: 3px 12px;
     align-items: flex-start;
-    gap: 40px 100px;
+    /*gap: 40px 100px;*/
     font-family:
       "Noto Serif Tamil Slanted",
       -apple-system,
@@ -265,16 +265,17 @@
     text-align: center;
     letter-spacing: 0.1px;
     line-height: 2;
-    flex-wrap: wrap;
+    
   }
   
   .footer-logo {
     aspect-ratio: 1.07;
     object-fit: contain;
     object-position: center;
-    width: 47px;
+    width: 2.938rem;
     align-self: start;
     flex-shrink: 0;
+    
   }
   
   .footer-text {
@@ -282,7 +283,19 @@
     margin-bottom: auto;
     flex-grow: 1;
     flex-shrink: 1;
-    width: 951px;
+    /*white-space: nowrap;*/
+    white-space: initial;
+  }
+
+  .footer-text a {
+    text-decoration: none;
+    color: #000;
+    
+  }
+
+  .footer-text a[name="ud_txt"]:hover{
+    text-decoration : underline;
+    font-weight: bold;
   }
   
   @media (max-width: 991px) {
@@ -291,11 +304,11 @@
       padding-left: 20px;
       padding-right: 20px;
     }
-  
+  /*
     .divider {
       white-space: initial;
     }
-  
+  */
     .password-toggle {
       padding-left: 20px;
       white-space: initial;
@@ -312,5 +325,6 @@
     .footer-text {
       max-width: 100%;
     }
+
   }
   
