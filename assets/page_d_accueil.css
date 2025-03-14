@@ -77,3 +77,17 @@ nav a[name="catégorie"]:hover, .connexion a:hover{
     height: 2rem; /* Ajustez la taille selon votre besoin */
     width: auto;
 }
+
+.image-container {
+    display: flex;  /* Met les images en ligne */
+    justify-content: center;  /* Centre horizontalement */
+    gap: 0rem;  /* Espacement entre les images */
+}
+
+.image-container img {
+    width: 48rem; /* Ajustez la taille selon votre besoin */
+    height: auto;
+    border: solid;
+    border-color: black;
+    border-width: 0.1rem 0.05rem 0.1rem 0.05rem;
+}
