@@ -1,0 +1,323 @@
+body {
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;
+    font-family:
+      Roboto,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    background-color: rgba(255, 251, 251, 1);*/
+}
+
+
+
+
+header {
+    align-self: stretch;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgba(251, 220, 185, 1);
+    /* haut | droit | bas | gauche */
+    padding: 0rem 5rem 0em 3rem;
+} 
+
+
+/* Logo */
+.logo img { 
+    height: 5em; 
+    padding-right: 5rem; 
+}
+
+/* Menu de navigation */
+.nav-header {
+    flex-grow: 1;
+    text-align: left;
+}
+
+
+.nav-header a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.nav-header a[name="catégorie"] {
+    margin: 0 2rem;
+}
+
+.nav-header a[name="catégorie"]:hover, .connexion a:hover{
+    text-decoration: underline;
+}
+
+.connexion {
+    display: flex;  
+    align-items: center;  
+    gap: 0.5rem; 
+}
+
+.connexion a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-left: 0 5rem;
+    font-size: 1.4em;
+}   
+
+.logo_connexion img {
+    height: 2rem; /* Ajustez la taille selon votre besoin */
+    width: auto;
+}
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
+*/
+
+
+
+  
+
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+ 
+  .site-header {
+    background-color: rgba(251, 220, 185, 1);
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    padding: 9px 80px 18px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    aspect-ratio: 1.07;
+    object-fit: contain;
+    object-position: center;
+    width: 136px;
+    margin-left: 25px;
+    max-width: 100%;
+  }
+  
+  .login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+  
+  .page-title {
+    color: rgba(0, 0, 0, 1);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-top: 11px;
+    margin-left: 13px;
+  }
+  
+  .register-link {
+    color: rgba(0, 0, 0, 1);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-top: 22px;
+    margin-left: 18px;
+  }
+  
+  .signup-link {
+    color: rgba(0, 119, 255, 1);
+    text-decoration: none;
+  }
+  
+  .welcome-message {
+    color: rgba(0, 0, 0, 1);
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    text-align: center;
+    margin-top: 35px;
+    margin-left: 31px;
+  }
+  
+  .social-login {
+    display: flex;
+    margin-top: 27px;
+    margin-left: 22px;
+    width: 112px;
+    max-width: 100%;
+    align-items: stretch;
+    gap: 20px;
+  }
+  
+  .social-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+  
+  .google-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 44px;
+    flex-shrink: 0;
+  }
+  
+  .facebook-icon {
+    aspect-ratio: 1.78;
+    object-fit: contain;
+    object-position: center;
+    width: 48px;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-shrink: 0;
+  }
+  
+  .divider {
+    display: flex;
+    margin-top: 11px;
+    margin-left: 22px;
+    width: 281px;
+    max-width: 100%;
+    align-items: center;
+    gap: 13px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1px;
+    line-height: 2;
+  }
+  
+  .divider-line {
+    aspect-ratio: 125;
+    width: 120px;
+    height: 1px;
+    background-color: #000;
+    border: none;
+    flex-grow: 1;
+  }
+  
+  .divider-text {
+    align-self: stretch;
+  }
+  
+
+  
+
+  
+
+  
+ 
+  
+  /* Début de la partie footer */
+  .site-footer {
+    background-color: rgba(217, 217, 217, 1);
+    align-self: stretch;
+    display: flex;
+    margin-top: 39px;
+    width: 100%;
+    padding: 3px 12px;
+    align-items: flex-start;
+    /*gap: 40px 100px;*/
+    font-family:
+      "Noto Serif Tamil Slanted",
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1px;
+    line-height: 2;
+    
+  }
+  
+  .footer-logo {
+    aspect-ratio: 1.07;
+    object-fit: contain;
+    object-position: center;
+    width: 2.938rem;
+    align-self: start;
+    flex-shrink: 0;
+    
+  }
+  
+  .footer-text {
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    /*white-space: nowrap;*/
+    white-space: initial;
+    font-size : 14px;
+  }
+
+  .footer-text a {
+    text-decoration: none;
+    color: #000;
+    
+  }
+
+  .footer-text a[name="ud_txt"]:hover{
+    text-decoration : underline;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 991px) {
+    .site-header {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  
+    .divider {
+      white-space: initial;
+    }
+  
+    .password-toggle {
+      padding-left: 20px;
+      white-space: initial;
+    }
+  
+    .login-button {
+      padding-right: 20px;
+    }
+  
+    .site-footer {
+      max-width: 100%;
+    }
+  
+    .footer-text {
+      max-width: 100%;
+    }
+
+  }
