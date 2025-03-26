@@ -25,6 +25,9 @@ header {
     padding: 0rem 5rem 0em 3rem;
 } 
 
+main{
+  padding : 10rem;
+}
 
 /* Logo */
 .logo img { 
