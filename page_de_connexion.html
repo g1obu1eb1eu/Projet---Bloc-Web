@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connexion - Stage-Aire</title>
-    <link rel="stylesheet" href="assets/Page_de_connexion.css" />
+    <link rel="stylesheet" href="page_de_connexion.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;700&family=Noto+Serif+Tamil+Slanted:wght@500&display=swap"
       rel="stylesheet"
@@ -24,7 +24,7 @@
         <h1 class="page-title">Connexion</h1>
 
         <p class="register-link">
-          Pas encore inscrit ? <a href="#" class="signup-link">S'inscrire</a>
+          Pas encore inscrit ? <a href="inscription.html" class="signup-link">S'inscrire</a>
         </p>
 
         <p class="welcome-message">
@@ -54,12 +54,13 @@
           <hr class="divider-line" />
         </div>
 
-        <form class="login-form">
+        <!-- Formulaire de connexion modifié -->
+        <form class="login-form" method="POST" action="connexion.php">
           <div class="form-group">
             <label for="email" class="form-label"
               >E-mail<span class="required">*</span></label
             >
-            <input type="email" id="email" class="form-input" required />
+            <input type="email" id="email" name="email" class="form-input" required />
           </div>
 
           <div class="form-group">
@@ -70,10 +71,9 @@
               <input
                 type="password"
                 id="password"
+                name="mot_de_passe"
                 class="form-input"
                 maxlength="30"
-                
-
                 required
               />
               <button type="button" class="password-toggle">👀</button>
@@ -100,7 +100,6 @@
           <a name="ud_txt" href="Conditions_generales_d'utilisation.html"> Condition générales d'utilisation</a> <a>&nbsp;|&nbsp;</a>
           <a name="ud_txt" href="Politique_de_confidentialité.html"> Politique de confidencialité</a> <a>&nbsp;|&nbsp;</a>
           <a name="ud_txt" href="Politique_relative_aux_cookies.html"> Politique relative aux cookies</a>
-
         </nav>
       </footer>
     </div>
