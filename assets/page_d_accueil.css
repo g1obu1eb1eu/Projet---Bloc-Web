@@ -2,34 +2,31 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
-
-/* Footer */
-footer {
-    background-color: #D9D9D9;
-    text-align: center;
-    padding: 15px;
-    font-size: 12px;
-}
-
 
 p{
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     size: 1rem;
 }
+/* --------------------------------------- Partie - header --------------------------------------- */
+.header-container {
+    display: flex;
+    justify-content: center; 
+    background-color:rgba(251, 220, 185, 1);
 
-header {
+}
+
+.site-header  {
     align-self: stretch;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color:rgba(251, 220, 185, 1);
     /* haut | droit | bas | gauche */
     padding: 0.1rem 5rem 0.1rem 3rem;
 }
-
 
 /* Logo */
 .logo img { 
@@ -38,34 +35,34 @@ header {
 }
 
 /* Menu de navigation */
-nav {
+.site-header nav {
     flex-grow: 1;
     text-align: left;
 }
 
 
-nav a{
+.site-header nav a{
     text-decoration: none;
     color: black;
     font-weight: bold;
     font-size: 1.4rem;
 }
 
-nav a[name="catégorie"] {
+.site-header nav a[name="catégorie"] {
     margin: 0 2rem;
 }
 
-nav a[name="catégorie"]:hover, .connexion a:hover{
+.site-header nav a[name="catégorie"]:hover, .connexion a:hover{
     text-decoration: underline;
 }
 
-.connexion {
+.site-header .connexion {
     display: flex;  
     align-items: center;  
     gap: 0.5rem; 
 }
 
-.connexion a {
+.site-header .connexion a {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -73,12 +70,13 @@ nav a[name="catégorie"]:hover, .connexion a:hover{
     font-size: 1.4em;
 }   
 
-.logo_connexion img {
+.site-header .logo_connexion img {
     height: 2rem; /* Ajustez la taille selon votre besoin */
     width: auto;
+    padding-left: 15rem;
 }
 
-/* Gestion du display des 2 grandes images */
+/* --------------------------------------- Partie - display 2 images --------------------------------------- */
 .image-container {
     display: flex;
     justify-content: center;  
@@ -93,8 +91,17 @@ nav a[name="catégorie"]:hover, .connexion a:hover{
     border-width: 0.1rem 0.05rem 0.1rem 0.05rem;
 }
 
-/* 2e partie -> button + image ovale */
+/* --------------------------------------- Partie - image + bouton + texte --------------------------------------- */
+.center-texte-img-container{
+    display: flex;
+    justify-content: center; 
+    /* background-color:rgb(173, 20, 58); */
+    width:100%;
+    
+}
+
 .texte-img-container{
+    max-width: 95rem;
     display: flex;
     align-items: center;
     margin: 0 auto;
@@ -134,12 +141,12 @@ nav a[name="catégorie"]:hover, .connexion a:hover{
     width: 100%;
 }
 
-/* 3e partie -> liste de boutons*/
+/* --------------------------------------- Partie - listes des boutons --------------------------------------- */
 .list-button-container {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     background-color: #d4a86a;
     text-align: center;
-    padding: 20px;
+    padding: 1.25rem;
 }
 
 
@@ -180,3 +187,41 @@ nav a[name="catégorie"]:hover, .connexion a:hover{
         max-width: calc(50% - 0.625rem);
     }
 }
+
+/* --------------------------------------- Partie footer --------------------------------------- */
+
+.site-footer {
+    background-color: rgba(217, 217, 217, 1);
+    align-self: stretch;
+    display: flex;
+    padding: 0.5rem auto;;
+    align-items: center;
+    justify-content: center;  
+  }
+
+  .site-footer a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+  }
+  
+  .footer-logo {
+    height: 3rem;
+    padding-right: 5rem;
+    
+  }
+  
+  .footer-text a {
+    text-decoration: none;
+    color: #000;
+    
+  }
+
+  .footer-text a:first-of-type {
+    margin-right: 0.625rem;
+}
+
+  .footer-text a[name="ud_txt"]:hover{
+    text-decoration : underline;
+    font-weight: bold;
+  }
