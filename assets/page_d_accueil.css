@@ -78,31 +78,105 @@ nav a[name="catégorie"]:hover, .connexion a:hover{
     width: auto;
 }
 
+/* Gestion du display des 2 grandes images */
 .image-container {
-    display: flex;  /* Met les images en ligne */
-    justify-content: center;  /* Centre horizontalement */
-    gap: 0rem;  /* Espacement entre les images */
+    display: flex;
+    justify-content: center;  
+    gap: 0rem;  
 }
 
 .image-container img {
-    width: 48rem; /* Ajustez la taille selon votre besoin */
+    width: 48rem;
     height: auto;
     border: solid;
     border-color: black;
     border-width: 0.1rem 0.05rem 0.1rem 0.05rem;
 }
 
-a[name="btn_connexion"]{
+/* 2e partie -> button + image ovale */
+.texte-img-container{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.texte-bouton{
+    flex: 1;
+    max-width: 50%;
+    margin:2rem;
+    margin-top: 3.5rem;
+}
+
+/* Bouton connexion */
+.bouton{
+    display: inline-block;
     border: solid;
     border-color: black;    
     border: 0.15rem solid;
     padding: 1rem 15rem;
     text-align: center;
     text-decoration: none;
+    white-space: nowrap;
     color: black;
-    
+    font-weight: bold;
+    margin-top: 2rem;
 }
 
-.part_deux{
-    margin:2rem;
+.image-ovale{
+    flex: 1;
+    text-align: center;
+}
+
+.image-ovale img{
+    max-width: 100%;
+    height:auto;    
+    width: 100%;
+}
+
+/* 3e partie -> liste de boutons*/
+.list-button-container {
+    font-family: Arial, sans-serif;
+    background-color: #d4a86a;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.list-button-container .container {
+    display: flex;
+    flex-wrap: wrap; /* Permet le retour à la ligne */
+    gap: 0.625rem;
+    max-width: 37.5rem;
+    margin: 0 auto;
+}
+
+.list-button-container .btn {
+    flex: 1 1 calc(25% - 0.625rem); /* 4 colonnes avec un gap */
+    max-width: calc(25% - 0.625rem); /* Empêche les boutons d'être trop grands */
+    padding: 0.625rem;
+    border: 0.125rem solid black;
+    background: white;
+    cursor: pointer;
+    border-radius: 0.625rem;
+    text-align: center;
+}
+
+.list-button-container .hidden {
+    display: none;
+}
+
+.list-button-container .show-more {
+    border: 0.125rem solid blue;
+    color: blue;
+    background: white;
+    margin-top: 0.938rem;
+}
+
+/* Responsive pour mobile : 2 colonnes */
+@media (max-width: 600px) {
+    .list-button-container .btn {
+        flex: 1 1 calc(50% - 0.625rem);
+        max-width: calc(50% - 0.625rem);
+    }
 }

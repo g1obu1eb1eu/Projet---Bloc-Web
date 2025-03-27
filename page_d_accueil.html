@@ -28,10 +28,53 @@
 				<img src="images/travail_1.png" alt="Travail_1">
 				<img src="images/travail_2.png" alt="Travail_2">
 			</div>
-			<div class="part_deux">
-				<h1>Bienvenue dans Stage-Aire, l’entreprise qui vous permettra de trouver votre stage en quelques clics</h1>
-				<a name="btn_connexion" href="page_de_connexion.html">Connexion à votre compte</a>
-			</div>
+			<section class="texte-img-container">
+				<div class="texte-bouton">
+					<h1>Bienvenue dans Stage-Aire</h1>
+					<p>L’entreprise qui vous permettra de trouver votre stage en quelques clics.</p>	
+					<a class="bouton" href="page_de_connexion.html">Connexion à votre compte</a>
+				</div>
+				<div class="image-ovale">
+					<img src="images/oval_main.png" alt="Image ronde">
+				</div>
+			</section>
+			<section class="list-button-container">
+				<h2>Trouver le stage idéal</h2>
+				<div class="container">
+					<!-- Boutons affichés au départ -->
+					<button class="btn">Administratif et Gestion</button>
+					<button class="btn">Informatique et Digital</button>
+					<button class="btn">Industriel et Technique</button>
+					<button class="btn">Commercial et Marketing</button>
+					<button class="btn">Santé et Social</button>
+					<button class="btn">Transport et Logistique</button>
+					<button class="btn">Éducation et Formation</button>
+					<button class="btn">Culture et Créativité</button>
+					
+					<!-- Boutons cachés au départ -->
+					<button class="btn hidden">Juridique et Droit</button>
+					<button class="btn hidden">Agroalimentaire</button>
+					<button class="btn hidden">Sécurité et Défense</button>
+					<button class="btn hidden">Tourisme et Hôtellerie</button>
+				</div>
+			
+				<br>
+				<button id="toggleBtn" class="btn show-more">Voir plus</button>
+			
+				<!-- Script Javascript pour afficher/réduire les boutons -->
+				<script>
+					document.getElementById("toggleBtn").addEventListener("click", function() {
+						let hiddenButtons = document.querySelectorAll(".hidden");
+						let isHidden = hiddenButtons[0].style.display === "none" || hiddenButtons[0].style.display === "";
+						
+						hiddenButtons.forEach(btn => {
+							btn.style.display = isHidden ? "block" : "none";
+						});
+			
+						this.textContent = isHidden ? "Voir moins" : "Voir plus";
+					});
+				</script>
+			</section>
 		</main>
 		<footer>
 			<p>© 2025 A propos | Accessibilité | Conditions générales | Politique de confidentialité | Cookies</p>
