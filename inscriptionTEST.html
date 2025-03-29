@@ -19,31 +19,66 @@
           class="logo"
         />
       </header>
-    <form action="inscriptionTEST.php" method="POST">
-        <label for="nom">Nom :</label>
-        <input type="text" id="nom" name="nom" required>
+    <main class="login-content">
+      <h1 class="page-title">Inscription</h1>
+      <p class="register-link">
+        Déjà un compte ? <a href="page_de_connexion.html" class="signup-link">Se connecter</a>
+      </p>
 
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
+      <p class="welcome-message">
+        Ravi de vous retrouver sur Stage-Aire !<br />
+        Inscrivez-vous et accédez à des centaines d'offres adaptées aux étudiants. <br />
+        Bénéficiez d'offres personnalisées, gérez vos candidatures facilement, et communiquez directement avec les recruteurs.<br />
+        Boostez votre avenir professionnel dès aujourd'hui !
+      </p>
 
-        <label for="mot_de_passe">Mot de passe :</label>
-        <input type="password" id="mot_de_passe" name="mot_de_passe" required>
 
-        <label for="prenom">Prenom :</label>
-        <input type="text" id="prenom" name="prenom" required>
+      <div class="divider">
+        <hr class="divider-line" />
+        <span class="divider-text">🌐</span>
+        <hr class="divider-line" />
+      </div>
 
-        <label for="telephone">Telephone :</label>
-        <input type="int" id="telephone" name="telephone" required>
 
-        <label for="date_de_naissance">Date de naissance :</label>
-        <input type="date" id="date_de_naissance" name="date_de_naissance" required>
+    <form class="login-form" action="inscriptionTEST.php" method="POST">
+      <div class="form-group">
+        <label for="nom" class="form-label">Nom : </label>
+        <input type="text" id="nom" name="nom" class="form-input" required>
+      </div>
 
-        <label for="genre">Genre :</label>
-        <input type="text" id="genre" name="genre" required>
+      <div class="form-group">
+        <label for="email" class="form-label">Email :</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
 
-        <button type="submit">S'inscrire</button>
+      <div class="form-group">
+        <label for="mot_de_passe" class="form-label">Mot de passe :</label>
+        <input type="password" id="mot_de_passe" name="mot_de_passe" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="prenom" class="form-label">Prenom :</label>
+        <input type="text" id="prenom" name="prenom" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telephone" class="form-label">Telephone :</label>
+        <input type="int" id="telephone" name="telephone" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date_de_naissance" class="form-label">Date de naissance :</label>
+        <input type="date" id="date_de_naissance" name="date_de_naissance" class="form-input" required>
+      </div>
+
+      <div class="form-group">
+        <label for="genre" class="form-label">Genre :</label>
+        <input type="text" id="genre" name="genre" class="form-input" required>
+      </div>
+
+        <button type="submit" class="login-button">S'inscrire</button>
     </form>
-
+  </main>
     <footer class="site-footer">
         <img
           src="images/logo.png"
