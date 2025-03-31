@@ -10,25 +10,37 @@
 		<header class="header-container">
 			<section class="site-header">
 				<div class="logo">
-					<img src="images/logo.png" alt="Stage-Aire">
+					<img src="images/logo.webp" alt="Stage-Aire">
 				</div>
-				<nav>
+		
+				<!-- Icône du menu burger -->
+				<div class="burger-menu" onclick="toggleMenu()">
+					&#9776; <!-- Symbole burger -->
+				</div>
+		
+				<nav class="nav-menu">
 					<a name="catégorie" href="#">Page d'accueil</a><a class="tirets">&nbsp;|&nbsp;</a>
 					<a name="catégorie" href="liste_des_entreprises.html">Liste des entreprises</a><a class="tirets">&nbsp;|&nbsp;</a>
 					<a name="catégorie" href="#">Consulter les offres</a>
 				</nav>
+		
 				<div class="connexion">
-					<div class="logo_connexion" >
-						<img src="images/connexion.png" alt="Stage-Aire">
+					<div class="logo_connexion">
+						<img src="images/connexion.webp" alt="Stage-Aire">
 					</div>
 					<a href="page_de_connexion.html">Connexion</a>
 				</div>
 			</section>
 		</header>
+		<script>
+			function toggleMenu() {
+				document.querySelector(".nav-menu").classList.toggle("show");
+			}
+		</script>	
 		<main>
 			<div class="image-container">
-				<img src="images/travail_1.png" alt="Travail_1">
-				<img src="images/travail_2.png" alt="Travail_2">
+				<img src="images/travail_1.webp" alt="Travail_1">
+				<img src="images/travail_2.webp" alt="Travail_2">
 			</div>
 			<section class="center-texte-img-container">
 				<section class="texte-img-container">
@@ -38,46 +50,65 @@
 						<a class="bouton" href="page_de_connexion.html">Connexion à votre compte</a>
 					</div>
 					<div class="image-ovale">
-						<img src="images/oval_main.png" alt="Image ronde">
+						<img src="images/oval_main.webp" alt="Image ronde">
 					</div>
 				</section>
 			</section>
 			<section class="list-button-container">
 				<h2>Trouver le stage idéal</h2>
-				<div class="container">
-					<!-- Boutons affichés au départ -->
-					<button class="btn">Administratif et Gestion</button>
-					<button class="btn">Informatique et Digital</button>
-					<button class="btn">Industriel et Technique</button>
-					<button class="btn">Commercial et Marketing</button>
-					<button class="btn">Santé et Social</button>
-					<button class="btn">Transport et Logistique</button>
-					<button class="btn">Éducation et Formation</button>
-					<button class="btn">Culture et Créativité</button>
-					
-					<!-- Boutons cachés au départ -->
-					<button class="btn hidden">Juridique et Droit</button>
-					<button class="btn hidden">Agroalimentaire</button>
-					<button class="btn hidden">Sécurité et Défense</button>
-					<button class="btn hidden">Tourisme et Hôtellerie</button>
+				<div class="list-button-container">
+					<div class="container">
+						<!-- Boutons affichés au départ -->
+						<button class="btn">Administratif et Gestion</button>
+						<button class="btn">Informatique et Digital</button>
+						<button class="btn">Industriel et Technique</button>
+						<button class="btn">Commercial et Marketing</button>
+						<button class="btn">Santé et Social</button>
+						<button class="btn">Transport et Logistique</button>
+						<button class="btn">Éducation et Formation</button>
+						<button class="btn">Culture et Créativité</button>
+				
+						<!-- Boutons cachés au départ -->
+						<button class="btn hidden">Juridique et Droit</button>
+						<button class="btn hidden">Agroalimentaire</button>
+						<button class="btn hidden">Sécurité et Défense</button>
+						<button class="btn hidden">Tourisme et Hôtellerie</button>
+					</div>
+				
+					<br>
+					<button id="toggleBtn" class="btn show-more">Voir plus</button>
 				</div>
-			
-				<br>
-				<button id="toggleBtn" class="btn show-more">Voir plus</button>
-			
-				<!-- Script Javascript pour afficher/réduire les boutons -->
+				
+				<!-- Script JavaScript pour afficher/réduire les boutons -->
 				<script>
+					function checkScreenWidth() {
+						let hiddenButtons = document.querySelectorAll(".hidden");
+						let toggleBtn = document.getElementById("toggleBtn");
+				
+						if (window.innerWidth <= 820) {
+							hiddenButtons.forEach(btn => btn.style.display = "block");
+							toggleBtn.style.display = "none"; // Cache le bouton
+						} else {
+							hiddenButtons.forEach(btn => btn.style.display = "none");
+							toggleBtn.style.display = "block"; // Affiche le bouton
+						}
+					}
+				
 					document.getElementById("toggleBtn").addEventListener("click", function() {
 						let hiddenButtons = document.querySelectorAll(".hidden");
 						let isHidden = hiddenButtons[0].style.display === "none" || hiddenButtons[0].style.display === "";
-						
+				
 						hiddenButtons.forEach(btn => {
 							btn.style.display = isHidden ? "block" : "none";
 						});
-			
+				
 						this.textContent = isHidden ? "Voir moins" : "Voir plus";
 					});
-				</script>
+				
+					// Vérifier au chargement et au redimensionnement
+					window.addEventListener("load", checkScreenWidth);
+					window.addEventListener("resize", checkScreenWidth);
+				</script>				
 			</section>
 		</main>
 		<!-- <footer>
@@ -85,7 +116,7 @@
 		</footer> -->
 		<footer class="site-footer">
             <img
-              src="images/logo.png"
+              src="images/logo.webp"
               alt="Logo Footer"
               class="footer-logo"
             />
