@@ -30,7 +30,7 @@
     align-self: stretch;
     display: flex;
     width: 100%;
-    padding: 9px 80px 18px;
+    padding: 0.563rem 5rem 1.125rem;
     flex-direction: column;
     align-items: center;
   }
@@ -39,8 +39,8 @@
     aspect-ratio: 1.07;
     object-fit: contain;
     object-position: center;
-    width: 136px;
-    margin-left: 25px;
+    width: 8.5rem;
+    margin-left: 1.563rem;
     max-width: 100%;
   }
   
@@ -54,24 +54,24 @@
   
   .page-title {
     color: rgba(0, 0, 0, 1);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 2;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.006rem;
     text-align: center;
-    margin-top: 11px;
-    margin-left: 13px;
+    margin-top: 0.688rem;
+    margin-left: 0.813rem;
   }
   
   .register-link {
     color: rgba(0, 0, 0, 1);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 2;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.006rem;
     text-align: center;
-    margin-top: 22px;
-    margin-left: 18px;
+    margin-top: 1.375rem;
+    margin-left: 1.125rem;
   }
   
   .signup-link {
@@ -81,23 +81,23 @@
   
   .welcome-message {
     color: rgba(0, 0, 0, 1);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 300;
-    line-height: 20px;
-    letter-spacing: 0.1px;
+    line-height: 1.25rem;
+    letter-spacing: 0.006rem;
     text-align: center;
-    margin-top: 35px;
-    margin-left: 31px;
+    margin-top: 2.188rem;
+    margin-left: 1.938rem;
   }
   
   .social-login {
     display: flex;
-    margin-top: 27px;
-    margin-left: 22px;
-    width: 112px;
+    margin-top: 1.688rem;
+    margin-left: 1.375rem;
+    width: 7rem;
     max-width: 100%;
     align-items: stretch;
-    gap: 20px;
+    gap: 1.25rem;
   }
   
   .social-btn {
@@ -111,7 +111,7 @@
     aspect-ratio: 1;
     object-fit: contain;
     object-position: center;
-    width: 44px;
+    width: 2.75rem;
     flex-shrink: 0;
   }
   
@@ -119,7 +119,7 @@
     aspect-ratio: 1.78;
     object-fit: contain;
     object-position: center;
-    width: 48px;
+    width: 3rem;
     margin-top: auto;
     margin-bottom: auto;
     flex-shrink: 0;
@@ -127,24 +127,24 @@
   
   .divider {
     display: flex;
-    margin-top: 11px;
-    margin-left: 22px;
-    width: 281px;
+    margin-top: 0.688rem;
+    margin-left: 1.375rem;
+    width: 17.563rem;
     max-width: 100%;
     align-items: center;
-    gap: 13px;
-    font-size: 12px;
+    gap: 0.813rem;
+    font-size: 0.75rem;
     color: rgba(0, 0, 0, 1);
     font-weight: 500;
     text-align: center;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.006rem;
     line-height: 2;
   }
   
   .divider-line {
     aspect-ratio: 125;
-    width: 120px;
-    height: 1px;
+    width: 7.5rem;
+    height: 0.063rem;
     background-color: #000;
     border: none;
     flex-grow: 1;
@@ -159,12 +159,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    max-width: 320px;
+    max-width: 20rem;
   }
   
   .form-group {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 
   .form-group input{
@@ -177,13 +177,13 @@
 
   .form-label {
     color: rgba(0, 0, 0, 1);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 2;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.006rem;
     text-align: center;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.313rem;
   }
   
   .required {
@@ -192,15 +192,15 @@
   
   .form-input {
     background-color: rgba(229, 186, 126, 1);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
     border-color: rgba(0, 0, 0, 1);
     border-style: solid;
-    border-width: 1px;
-    width: 283px;
+    border-width: 0.063rem;
+    width: 17.688rem;
     max-width: 100%;
-    height: 29px;
-    margin-top: 5px;
-    margin-left : 30px;
+    height: 1.813rem;
+    margin-top: 0.313rem;
+    margin-left : 1.875rem;
   }
   
   .password-container {
@@ -214,24 +214,24 @@
   
   .password-toggle {
     position: absolute;
-    right: 10px;
+    right: 0.625rem;
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 12px;
+    font-size: 0.75rem;
     
   }
   
   .forgot-password {
     color: rgba(255, 51, 51, 1);
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 2;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.006rem;
     text-align: center;
-    margin-top: 18px;
+    margin-top: 1.125rem;
     text-decoration: none;
     align-self: center;
     padding-left : 1.625rem;
@@ -241,19 +241,19 @@
     background-color: rgb(109, 182, 99);
     border-color: rgba(0, 0, 0, 1);
     border-style: solid;
-    border-width: 1px;
-    margin-top: 38px;
-    margin-left: 18px;
-    width: 123px;
+    border-width: 0.063rem;
+    margin-top: 2.375rem;
+    margin-left: 1.125rem;
+    width: 7.688rem;
     max-width: 100%;
-    padding: 9px 18px 16px;
+    padding: 0.563rem 1.125rem 1rem;
     font-family:
       Inter,
       -apple-system,
       Roboto,
       Helvetica,
       sans-serif;
-    font-size: 13px;
+    font-size: 0.813rem;
     color: rgb(255, 255, 255);
     font-weight: 700;
     cursor: pointer;
@@ -264,9 +264,9 @@
     background-color: rgba(217, 217, 217, 1);
     align-self: stretch;
     display: flex;
-    margin-top: 39px;
+    margin-top: 2.438rem;
     width: 100%;
-    padding: 3px 12px;
+    padding: 0.188rem 0.75rem;
     align-items: flex-start;
     /*gap: 40px 100px;*/
     font-family:
@@ -275,11 +275,11 @@
       Roboto,
       Helvetica,
       sans-serif;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: rgba(0, 0, 0, 1);
     font-weight: 500;
     text-align: center;
-    letter-spacing: 0.1px;
+    letter-spacing: 0.006rem;
     line-height: 2;
     
   }
@@ -331,7 +331,7 @@
     }
   
     .login-button {
-      padding-right: 20px;
+      padding-right: 1.25rem;
     }
   
     .site-footer {

@@ -29,7 +29,7 @@ body {
     align-self: stretch;
     display: flex;
     width: 100%;
-    padding: 9px 80px 18px;
+    padding: 0.563rem 5rem 1.125rem;
     flex-direction: column;
     align-items: center;
   }
@@ -38,8 +38,8 @@ body {
     aspect-ratio: 1.07;
     object-fit: contain;
     object-position: center;
-    width: 136px;
-    margin-left: 25px;
+    width: 8.5rem;
+    margin-left: 1.563rem;
     max-width: 100%;
   }
 
