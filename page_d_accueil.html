@@ -12,19 +12,31 @@
 				<div class="logo">
 					<img src="images/logo.webp" alt="Stage-Aire">
 				</div>
-				<nav>
+		
+				<!-- Icône du menu burger -->
+				<div class="burger-menu" onclick="toggleMenu()">
+					&#9776; <!-- Symbole burger -->
+				</div>
+		
+				<nav class="nav-menu">
 					<a name="catégorie" href="#">Page d'accueil</a><a class="tirets">&nbsp;|&nbsp;</a>
 					<a name="catégorie" href="liste_des_entreprises.html">Liste des entreprises</a><a class="tirets">&nbsp;|&nbsp;</a>
 					<a name="catégorie" href="#">Consulter les offres</a>
 				</nav>
+		
 				<div class="connexion">
-					<div class="logo_connexion" >
+					<div class="logo_connexion">
 						<img src="images/connexion.webp" alt="Stage-Aire">
 					</div>
 					<a href="page_de_connexion.html">Connexion</a>
 				</div>
 			</section>
 		</header>
+		<script>
+			function toggleMenu() {
+				document.querySelector(".nav-menu").classList.toggle("show");
+			}
+		</script>	
 		<main>
 			<div class="image-container">
 				<img src="images/travail_1.webp" alt="Travail_1">

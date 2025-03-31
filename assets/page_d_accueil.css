@@ -56,7 +56,6 @@ p{
     text-align: left;
 }
 
-
 .site-header nav a{
     text-decoration: none;
     color: black;
@@ -80,6 +79,13 @@ p{
 
 .site-header .logo_connexion img {
     width: auto;
+}
+
+.burger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
 }
 
 @media (max-width: 1920px) {
@@ -148,38 +154,27 @@ p{
     }
 }
 
-/* @media (max-width: 500px) {
-    .site-header  {
-        padding: 0.1rem 5rem 0.1rem 3rem;
-    }
-    
-    .logo img { 
-        height: 1.25em; 
-        padding-right: 1.25rem;
+/* Media Query pour 360px */
+@media (max-width: 360px) {
+    .site-header {
+        justify-content: space-between;
+        position: relative;
     }
 
-    .site-header nav a {
-        font-size: 0.35rem;
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
-    .site-header nav a[name="catégorie"] {
-        margin: 0 0.5rem;
+    .burger-menu {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
     }
+}
 
-    .site-header .connexion {
-        gap: 0.125rem; 
-    }
-
-    .site-header .connexion a {
-        margin-left: 0 1.25rem;
-        font-size: 0.35em;
-    }   
-    
-    .site-header .logo_connexion img {
-        height: 0.5rem;
-        padding-left: 3.25rem;
-    }
-} */
 
 /* --------------------------------------- Partie - display 2 images --------------------------------------- */
 .image-container {
