@@ -1,57 +1,62 @@
 <?php
+session_start();
+
 // Connexion à la base de données
-$host = "localhost";
-$user = "root";  // Par défaut sous XAMPP, l'utilisateur est "root"
-$pass = "";  // Par défaut, pas de mot de passe
-$dbname = "utilisateurs"; // Nom de la base de données
+$host = 'localhost';
+$dbname = 'utilisateurs';
+$username = 'root'; // Modifier selon ton environnement
+$password = ''; // Modifier selon ton environnement
 
-$conn = new mysqli($host, $user, $pass, $dbname);
-
-// Vérifier la connexion
-if ($conn->connect_error) {
-    die("Connexion échouée : " . $conn->connect_error);
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password, [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+    ]);
+} catch (PDOException $e) {
+    die("Erreur de connexion : " . $e->getMessage());
 }
 
-// Récupération des données du formulaire
-$nom = $_POST['nom'];
-$email = $_POST['email'];
-$mot_de_passe = password_hash($_POST['mot_de_passe'], PASSWORD_DEFAULT); // Hachage du mot de passe
-$prenom = $_POST['prenom'];
-$telephone = $_POST['telephone'];
-$date_de_naissance = $_POST['date_de_naissance'];
-$genre = $_POST['genre'];
+// Vérification si le formulaire a été soumis
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Récupération des données du formulaire avec sécurisation
+    $nom = htmlspecialchars(trim($_POST['nom']));
+    $prenom = htmlspecialchars(trim($_POST['prenom']));
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $telephone = htmlspecialchars(trim($_POST['telephone']));
+    $date_de_naissance = $_POST['date_de_naissance'];
+    $genre = htmlspecialchars(trim($_POST['genre']));
+    $mot_de_passe = $_POST['mot_de_passe'];
 
+    // Vérification des champs obligatoires
+    if (empty($nom) || empty($prenom) || empty($email) || empty($telephone) || empty($date_de_naissance) || empty($genre) || empty($mot_de_passe)) {
+        die("Tous les champs sont obligatoires !");
+    }
 
+    // Vérification de l'email valide
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        die("Email invalide !");
+    }
 
-// Vérifier si l'email existe déjà
-$sql_check = "SELECT id FROM users WHERE email = ?";
-$stmt_check = $conn->prepare($sql_check);
-$stmt_check->bind_param("s", $email);
-$stmt_check->execute();
-$stmt_check->store_result();
+    // Vérification si l'email existe déjà
+    $stmt = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = ?");
+    $stmt->execute([$email]);
 
-if ($stmt_check->num_rows > 0) {
-    echo "Email déjà utilisé.";
-    $stmt_check->close();
-    $conn->close();
-    exit(); // Arrête le script ici
+    if ($stmt->fetch()) {
+        die("Cet email est déjà utilisé !");
+    }
+
+    // Hachage du mot de passe
+    $mot_de_passe_hash = password_hash($mot_de_passe, PASSWORD_DEFAULT);
+
+    // Insertion dans la base de données
+    $stmt = $pdo->prepare("INSERT INTO utilisateurs (nom, prenom, email, telephone, date_de_naissance, genre, mot_de_passe) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $success = $stmt->execute([$nom, $prenom, $email, $telephone, $date_de_naissance, $genre, $mot_de_passe_hash]);
+
+    if ($success) {
+        header("Location: page_de_connexion.html");
+        exit(); // S'assurer que la redirection s'exécute correctement
+    } else {
+        echo "Erreur lors de l'inscription.";
+    }
 }
-$stmt_check->close();
-
-// Préparation de la requête SQL
-$stmt = $conn->prepare("INSERT INTO users (nom, email, mot_de_passe, prenom, telephone, date_de_naissance, genre) VALUES (?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("ssssiss", $nom, $email, $mot_de_passe, $prenom, $telephone, $date_de_naissance, $genre);
-
-if ($stmt->execute()) {
-    // Redirection vers la page de connexion après inscription
-    header("Location: page_de_connexion.html");
-    exit(); // Arrête le script après la redirection
-} else {
-    echo "Erreur : " . $stmt->error;
-}
-
-
-// Fermer la connexion
-$stmt->close();
-$conn->close();
 ?>
