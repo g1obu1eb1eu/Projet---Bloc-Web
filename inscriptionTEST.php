@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     // Vérification si l'email existe déjà
-    $stmt = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = ?");
+    $stmt = $pdo->prepare("SELECT id FROM inscription WHERE email = ?");
     $stmt->execute([$email]);
 
     if ($stmt->fetch()) {
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $mot_de_passe_hash = password_hash($mot_de_passe, PASSWORD_DEFAULT);
 
     // Insertion dans la base de données
-    $stmt = $pdo->prepare("INSERT INTO utilisateurs (nom, prenom, email, telephone, date_de_naissance, genre, mot_de_passe) VALUES (?, ?, ?, ?, ?, ?, ?)");
+    $stmt = $pdo->prepare("INSERT INTO inscription (nom, prenom, email, telephone, date_de_naissance, genre, mot_de_passe) VALUES (?, ?, ?, ?, ?, ?, ?)");
     $success = $stmt->execute([$nom, $prenom, $email, $telephone, $date_de_naissance, $genre, $mot_de_passe_hash]);
 
     if ($success) {

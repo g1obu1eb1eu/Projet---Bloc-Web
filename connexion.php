@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mot_de_passe = $_POST['mot_de_passe'];
 
     // Requête pour vérifier l'utilisateur
-    $stmt = $conn->prepare("SELECT id, nom, mot_de_passe FROM utilisateurs WHERE email = :email");
+    $stmt = $conn->prepare("SELECT id, nom, mot_de_passe FROM inscription WHERE email = :email");
     $stmt->bindParam(':email', $email);
     $stmt->execute();
 

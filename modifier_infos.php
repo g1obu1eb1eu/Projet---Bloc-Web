@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $localite = $_POST['localite'];
 
     // Requête pour mettre à jour les informations dans la base de données
-    $updateStmt = $conn->prepare("UPDATE utilisateurs SET
+    $updateStmt = $conn->prepare("UPDATE inscription SET
         nom = :nom,
         prenom = :prenom,
         telephone = :telephone,
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (move_uploaded_file($cv_tmp_name, $cv_path)) {
             // Mettre à jour le chemin du CV dans la base de données
-            $cvUpdateStmt = $conn->prepare("UPDATE utilisateurs SET cv_path = :cv_path WHERE id = :id");
+            $cvUpdateStmt = $conn->prepare("UPDATE inscription SET cv_path = :cv_path WHERE id = :id");
             $cvUpdateStmt->bindParam(':cv_path', $cv_path);
             $cvUpdateStmt->bindParam(':id', $_SESSION['user_id']);
             $cvUpdateStmt->execute();

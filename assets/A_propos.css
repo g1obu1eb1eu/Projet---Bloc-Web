@@ -49,18 +49,6 @@ margin: 0 2rem;
 text-decoration: underline;
 }
 
-
-.site-header nav span{
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  font-size: 1.4rem;
-  }
-  
-  .site-header nav span[name="catégorie"] {
-  margin: 0 2rem;
-  }
-
 .site-header .connexion {
 display: flex;  
 align-items: center;  

@@ -76,7 +76,7 @@
   
   .signup-link {
     color: rgb(17, 0, 253);
-    text-decoration: underline;
+    text-decoration: none;
   }
   
   .welcome-message {
@@ -238,7 +238,7 @@
   }
   
   .login-button {
-    background-color: rgb(11, 71, 3);
+    background-color: rgb(109, 182, 99);
     border-color: rgba(0, 0, 0, 1);
     border-style: solid;
     border-width: 1px;
