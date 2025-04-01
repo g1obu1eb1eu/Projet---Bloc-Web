@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Vérifier l'ancien mot de passe
-    $stmt = $conn->prepare("SELECT mot_de_passe FROM utilisateurs WHERE id = :id");
+    $stmt = $conn->prepare("SELECT mot_de_passe FROM inscription WHERE id = :id");
     $stmt->bindParam(':id', $_SESSION['user_id']);
     $stmt->execute();
     
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_new_password = password_hash($nouveau_mot_de_passe, PASSWORD_DEFAULT);
 
         // Requête pour mettre à jour le mot de passe dans la base de données
-        $updateStmt = $conn->prepare("UPDATE utilisateurs SET mot_de_passe = :mot_de_passe WHERE id = :id");
+        $updateStmt = $conn->prepare("UPDATE inscription SET mot_de_passe = :mot_de_passe WHERE id = :id");
         $updateStmt->bindParam(':mot_de_passe', $hashed_new_password);
         $updateStmt->bindParam(':id', $_SESSION['user_id']);
         $updateStmt->execute();

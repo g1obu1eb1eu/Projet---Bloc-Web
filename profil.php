@@ -21,7 +21,7 @@ try {
 }
 
 // Récupérer les informations de l'utilisateur connecté
-$stmt = $conn->prepare("SELECT * FROM utilisateurs WHERE id = :id");
+$stmt = $conn->prepare("SELECT * FROM inscription WHERE id = :id");
 $stmt->bindParam(':id', $_SESSION['user_id'], PDO::PARAM_INT);
 $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
