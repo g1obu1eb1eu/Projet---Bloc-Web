@@ -1,34 +1,71 @@
 <!doctype html>
 <html lang="fr">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Inscription sur Stage-Aire">
     <title>Ajouter une entreprise</title>
-    <link rel="stylesheet" href="assets/ajouter_entreprise.css" />
-</head>
+    <link rel="stylesheet" href="assets/inscriptionTEST.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Inter:wght@400;700&family=Noto+Serif+Tamil+Slanted:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 <body>
-    <header class="page-header">
-        <h1>Ajouter une entreprise</h1>
-    </header>
-    <main>
-        <form action="ajouter_entreprise.php" method="POST" enctype="multipart/form-data">
-            <label for="nom">Nom de l'entreprise :</label>
-            <input type="text" id="nom" name="nom" required><br>
+    <div class="login-container">
+        <header class="site-header">
+          <img
+            src="images/logo.png"
+            alt="Logo Stage-Aire"
+            class="logo"
+          />
+        </header>
+    <main class="login-content">
+        <form class="login-form" action="ajouter_entreprise.php" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+            <label for="nom" class="form-label">Nom de l'entreprise :</label>
+            <input type="text" id="nom" name="nom" class="form-input" required><br>
+        </div>
 
-            <label for="description">Description :</label>
-            <textarea id="description" name="description"></textarea><br>
+        <div class="form-group">
+            <label for="description" class="form-label">Description :</label>
+            <textarea id="description" name="description" class="form-input"></textarea><br>
+        </div> 
 
-            <label for="ville">Ville :</label>
-            <input type="text" id="ville" name="ville" required><br>
+        <div class="form-group">
+            <label for="ville" class="form-label">Ville :</label>
+            <input type="text" id="ville" name="ville" class="form-input" required><br>
+        </div>
 
-            <label for="code_postal">Code postal :</label>
-            <input type="text" id="code_postal" name="code_postal" required><br>
+        <div class="form-group">
+            <label for="code_postal" class="form-label">Code postal :</label>
+            <input type="text" id="code_postal" name="code_postal" class="form-input" required><br>
+        </div>
 
-            <label for="logo">Logo de l'entreprise :</label>
-            <input type="file" id="logo" name="logo" accept="image/*"><br>
+        <div class="form-group">    
+            <label for="logo" class="form-label">Logo de l'entreprise :</label>
+            <input type="file" id="logo" name="logo" class="form-input" accept="image/*"><br>
+        </div>
 
-            <button type="submit">Ajouter l'entreprise</button>
+            <button type="submit" class="login-button">Ajouter l'entreprise</button>
         </form>
     </main>
+    <footer class="site-footer">
+        <img
+          src="images/logo.png"
+          alt="Logo Footer"
+          class="footer-logo"
+        />
+        
+        <nav class="footer-text">
+          <a> © 2025 </a>
+          <a name="ud_txt" href="A_propos.html"> A propos</a> <a>&nbsp;|&nbsp;</a>
+          <a name="ud_txt" href="Accesibilite.html"> Accesibilité</a> <a>&nbsp;|&nbsp;</a>
+          <a name="ud_txt" href="Conditions_generales_d'utilisation.html"> Condition générales d'utilisation</a> <a>&nbsp;|&nbsp;</a>
+          <a name="ud_txt" href="Politique_de_confidentialite.html"> Politique de confidentialité</a> <a>&nbsp;|&nbsp;</a>
+          <a name="ud_txt" href="Politique_relative_aux_cookies.html"> Politique relative aux cookies</a>
+  
+        </nav>
+      </footer>
 </body>
 </html>

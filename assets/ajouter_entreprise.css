@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family:
+      Roboto,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    background-color: rgba(255, 251, 251, 1);
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+ 
+  .site-header {
+    background-color: rgba(251, 220, 185, 1);
+    align-self: stretch;
+    display: flex;
+    width: 100%;
+    padding: 0.563rem 5rem 1.125rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    aspect-ratio: 1.07;
+    object-fit: contain;
+    object-position: center;
+    width: 8.5rem;
+    margin-left: 1.563rem;
+    max-width: 100%;
+  }
+
+/* --------------------------------------- Partie form --------------------------------------- */
+.login-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.page-title {
+  color: rgba(0, 0, 0, 1);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 5;
+  
+  text-align: center;
+  margin-top: 0.688rem;
+  margin-left: 0.813rem;
+}
+
+.register-link {
+  color: rgba(0, 0, 0, 1);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.006rem;
+  text-align: center;
+  margin-top: 1.375rem;
+  margin-left: 1.125rem;
+}
+
+.signup-link {
+  color: rgb(17, 0, 253);
+  text-decoration: underline;
+}
+
+.welcome-message {
+  color: rgba(0, 0, 0, 1);
+  font-size: 0.75rem;
+  font-weight: 300;
+  line-height: 1.25rem;
+  letter-spacing: 0.006rem;
+  text-align: center;
+  margin-top: 2.188rem;
+  margin-left: 1.938rem;
+}
+
+
+.divider {
+  display: flex;
+  margin-top: 0.688rem;
+  margin-left: 1.375rem;
+  width: 17.563rem;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.813rem;
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 1);
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.006rem;
+  line-height: 2;
+}
+
+.divider-line {
+  aspect-ratio: 125;
+  width: 7.5rem;
+  height: 0.063rem;
+  background-color: #000;
+  border: none;
+  flex-grow: 1;
+}
+
+.divider-text {
+  align-self: stretch;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 20rem;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 1.25rem;
+}
+
+.form-group input{
+  padding-left: 0.313rem;
+}
+
+.form-group label{
+  padding-left : 1.75rem;
+}
+
+.form-label {
+  color: rgba(0, 0, 0, 1);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 2;
+  letter-spacing: 0.006rem;
+  text-align: center;
+  display: block;
+  margin-bottom: 0.313rem;
+}
+
+.required {
+  color: rgba(255, 0, 0, 1);
+}
+
+.form-input {
+  background-color: rgba(229, 186, 126, 1);
+  box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 0.063rem;
+  width: 17.688rem;
+  max-width: 100%;
+  height: 1.813rem;
+  margin-top: 0.313rem;
+  margin-left : 1.875rem;
+}
+
+.login-button {
+  background-color: rgb(11, 71, 3);
+  border-color: rgba(0, 0, 0, 1);
+  border-style: solid;
+  border-width: 0.063rem;
+  margin-top: 1.563rem;
+  margin-bottom: 1.563rem;
+  margin-left: 1.875rem;
+  width: 7.688rem;
+  max-width: 100%;
+  padding: 0.563rem 1.125rem 1rem;
+  
+  font-size: 0.813rem;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  cursor: pointer;
+}
+  
+ /* --------------------------------------- Partie footer --------------------------------------- */
+
+.site-footer {
+    background-color: rgba(217, 217, 217, 1);
+    align-self: stretch;
+    display: flex;
+    padding: 0.5rem auto;;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;  
+    }
+    
+    .site-footer a{
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    }
+    
+    .footer-logo {
+    height: 3rem;
+    padding-right: 5rem;
+    
+    }
+    
+    .footer-text a {
+    text-decoration: none;
+    color: #000;
+    
+    }
+    
+    .footer-text a:first-of-type {
+    margin-right: 0.625rem;
+    }
+    
+    .footer-text a[name="ud_txt"]:hover{
+    text-decoration : underline;
+    font-weight: bold;
+    }
