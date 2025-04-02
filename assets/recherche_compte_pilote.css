@@ -127,12 +127,12 @@ body {
 
   .login-form {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     margin-top: 40px;
     width: 100%;
     max-width: 1000px;
-    margin-left: -20rem;
+    margin-left: 18rem;
   }
   
     
