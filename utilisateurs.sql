@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 09 avr. 2025 à 16:31
+-- Généré le : mer. 09 avr. 2025 à 23:37
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -43,7 +43,6 @@ CREATE TABLE `commentaires` (
 INSERT INTO `commentaires` (`id`, `entreprise_id`, `user_id`, `commentaire`, `nom_utilisateur`, `prenom_utilisateur`) VALUES
 (8, 1, 14, 'J\'aime beaucoup', 'bob', 'bob'),
 (9, 1, 14, 'Bob\r\n', 'bob', 'bob'),
-(10, 1, 14, 'Je s\'appelle grout\r\n', 'bob', 'bob'),
 (11, 3, 15, 'Ceci est un test', 'Smail', 'Benali'),
 (16, 1, 16, 'test 2.0', 'Grad', 'Julien'),
 (17, 1, 16, 'c\'est moi J G', 'Grad', 'Julien'),
@@ -77,13 +76,10 @@ INSERT INTO `entreprises` (`id`, `nom`, `description`, `ville`, `code_postal`, `
 (2, 'Microsoft', 'Développement de logiciels', 'Lyon', '69000', 'microsoft.png', 'microsoft@gmail.com', 'microsoft', NULL),
 (3, 'Amazon', 'Commerce en ligne', 'Marseille', '13000', 'amazon.png', '', '', NULL),
 (4, 'Tesla', 'Fabricant de voitures électriques', 'Bordeaux', '33000', 'tesla.png', '', '', NULL),
-(18, 'Lego', 'Lego', 'Lille', '59000', 'LEGO_logo.svg.png', '', '', NULL),
-(19, 'jfjfjs', 'ss', 'ss', 'ss', '', '', '', NULL),
-(20, 'aaaaaaaaaaaaa', 'QSDSFDGFHGJJ.K/', 'Tours', '37000', 'tomates-fraiches_1053-566.jpeg', '', '', NULL),
-(21, 'DFSF', 'FDSFSF', 'FDSFS', '2300', '', '', '', NULL),
-(22, 'Bien', 'qqch', 'Paris', '59000', '', '', '', NULL),
-(23, 'fdsf', 'dfs', 'dfsf', '12340', '', '', '', NULL),
-(24, 'aaaaaaaaaaaaa', 'FHJFJHF', 'BB?', '12309', '', '', '', NULL);
+(18, 'Lego', 'Lego', 'Lille', '59000', 'Lego.png', '', '', NULL),
+(19, 'Tomate', 'tomate', 'Tours', '37000', 'tomate.png', '', '', NULL),
+(20, 'Test', 'Test', 'Tours', '37000', '', '', '', NULL),
+(22, 'Bien', 'qqch', 'Paris', '59000', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -130,7 +126,9 @@ INSERT INTO `evaluations` (`id`, `entreprise_id`, `user_id`, `rating`) VALUES
 (33, 1, NULL, 4),
 (34, 1, NULL, 3),
 (35, 1, 14, 4),
-(36, 1, 14, 5);
+(36, 1, 14, 5),
+(37, 2, NULL, 1),
+(38, 2, NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -189,7 +187,9 @@ CREATE TABLE `offres` (
 --
 
 INSERT INTO `offres` (`id`, `entreprise_id`, `titre`, `description`, `date_publication`, `entreprise`, `competence`, `localisation`, `remuneration`, `duree_offre`, `logo`) VALUES
-(3, 1, 'Développeur Web Junior', 'Nous recherchons un développeur web junior pour rejoindre notre équipe dynamique et participer au développement de notre site e-commerce.', '2025-04-03', 'TechSolutions', 'HTML, CSS, JavaScript, PHP', 'Paris', 2500.00, 6, 'techsolutions_logo.jpg');
+(3, 1, 'Développeur Web Junior', 'Nous recherchons un développeur web junior pour rejoindre notre équipe dynamique et participer au développement de notre site e-commerce.', '2025-04-03', 'TechSolutions', 'HTML, CSS, JavaScript, PHP', 'Paris', 2500.00, 6, 'techsolutions_logo.jpg'),
+(5, 2, 'Dev web', 'Intellectum est enim mihi quidem in multis, et maxime in me ipso, sed paulo ante in omnibus, cum M. Marcellum senatui reique publicae concessisti, commemoratis praesertim offensionibus, te auctoritatem huius ordinis dignitatemque rei publicae tuis vel doloribus vel suspicionibus anteferre. Ille quidem fructum omnis ante actae vitae hodierno die maximum cepit, cum summo consensu senatus, tum iudicio tuo gravissimo et maximo. Ex quo profecto intellegis quanta in dato beneficio sit laus, cum in accepto sit tanta gloria.', '2025-04-09', NULL, 'fdsfs', 'Lille', 120.00, 123, ''),
+(6, 1, 'offre', 'ceci est une offre', '2025-04-09', NULL, 'Rien', 'Lyon', 123.00, 12, '');
 
 -- --------------------------------------------------------
 
@@ -303,7 +303,9 @@ CREATE TABLE `wishlist` (
 INSERT INTO `wishlist` (`id`, `entreprise_id`, `user_id`) VALUES
 (3, NULL, 16),
 (18, 1, 14),
-(19, 18, 14);
+(19, 18, 14),
+(20, 20, 16),
+(21, 2, 14);
 
 --
 -- Index pour les tables déchargées
@@ -391,19 +393,19 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT pour la table `commentaires`
 --
 ALTER TABLE `commentaires`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT pour la table `entreprises`
 --
 ALTER TABLE `entreprises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT pour la table `evaluations`
 --
 ALTER TABLE `evaluations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT pour la table `inscription`
@@ -415,7 +417,7 @@ ALTER TABLE `inscription`
 -- AUTO_INCREMENT pour la table `offres`
 --
 ALTER TABLE `offres`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT pour la table `utilisateurs`
@@ -427,7 +429,7 @@ ALTER TABLE `utilisateurs`
 -- AUTO_INCREMENT pour la table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Contraintes pour les tables déchargées
