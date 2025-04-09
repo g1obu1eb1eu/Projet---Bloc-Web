@@ -64,6 +64,7 @@
 
         <button type="submit" class="login-button">S'inscrire</button>
     </form>
+  </div>
   </main>
 
 <?php include 'footer.php'; ?>
